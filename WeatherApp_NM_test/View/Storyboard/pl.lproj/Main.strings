@@ -1,0 +1,54 @@
+
+/* Class = "UINavigationItem"; title = "Check the weather"; ObjectID = "AeL-kN-qev"; */
+"AeL-kN-qev.title" = "Sprawdź pogodę";
+
+/* Class = "UILabel"; text = "Temperature"; ObjectID = "Bbq-bz-fTG"; */
+"Bbq-bz-fTG.text" = "Temperatura";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "Efj-bH-RWs"; */
+"Efj-bH-RWs.text" = "Opis";
+
+/* Class = "UILabel"; text = "Humidity"; ObjectID = "Hed-44-dJ5"; */
+"Hed-44-dJ5.text" = "Wilgotność";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "ImX-Zg-Jtf"; */
+"ImX-Zg-Jtf.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Mgd-SU-dGE"; */
+"Mgd-SU-dGE.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "PXA-XC-Xbc"; */
+"PXA-XC-Xbc.text" = "Label";
+
+/* Class = "UILabel"; text = "City Description"; ObjectID = "UEk-hX-Fwl"; */
+"UEk-hX-Fwl.text" = "City Description";
+
+/* Class = "UILabel"; text = "City Name"; ObjectID = "Vob-ZH-gTa"; */
+"Vob-ZH-gTa.text" = "City Name";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "b5f-zA-X3J"; */
+"b5f-zA-X3J.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "SEND WEATHER"; ObjectID = "dH9-UU-IzW"; */
+"dH9-UU-IzW.normalTitle" = "WYŚLIJ PROGNOZĘ";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "iXs-e1-LjQ"; */
+"iXs-e1-LjQ.text" = "Label";
+
+/* Class = "UILabel"; text = "Maximal"; ObjectID = "iv6-7q-GMM"; */
+"iv6-7q-GMM.text" = "Maksymalna";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "j1Q-uV-C6A"; */
+"j1Q-uV-C6A.text" = "Description";
+
+/* Class = "UILabel"; text = "Minimal"; ObjectID = "mzz-6B-Qb6"; */
+"mzz-6B-Qb6.text" = "Minimalna";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "r88-sG-NHq"; */
+"r88-sG-NHq.text" = "Label";
+
+/* Class = "UILabel"; text = "Pressure"; ObjectID = "rMm-m2-0b4"; */
+"rMm-m2-0b4.text" = "Ciśnienie";
+
+/* Class = "UILabel"; text = "Measured"; ObjectID = "zRO-nQ-hhV"; */
+"zRO-nQ-hhV.text" = "Wilgotność";

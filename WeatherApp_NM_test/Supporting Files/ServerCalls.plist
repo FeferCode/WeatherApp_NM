@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>image_url</key>
+	<string>https://openweathermap.org/img/w/</string>
+	<key>imperial_units</key>
+	<string>&amp;units=imperial</string>
+	<key>metric_units</key>
+	<string>&amp;units=metric</string>
+	<key>api_key</key>
+	<string>&amp;appid=d4d0422f0977171910e58e7e8e6c2e98</string>
+	<key>api_base_call</key>
+	<string>https://api.openweathermap.org/data/2.5/weather?</string>
+	<key>search_city_by_name</key>
+	<string>q=</string>
+	<key>search_city_by_id</key>
+	<string>id=</string>
+</dict>
+</plist>
