@@ -61,16 +61,27 @@ class DetailsVC: UIViewController, MFMessageComposeViewControllerDelegate {
         switch (result.rawValue) {
         case MessageComposeResult.cancelled.rawValue:
             self.dismiss(animated: true, completion: nil)
-            messageAlert(withText: "Wiadomość została anulowana", status: "Informacja")
+            let message = NSLocalizedString("Message was canceled", comment: "DetailVC")
+            let status = NSLocalizedString("Information", comment: "DetailVC")
+            messageAlert(withText: message, status: status)
+            
         case MessageComposeResult.failed.rawValue:
             self.dismiss(animated: true, completion: nil)
-            messageAlert(withText: "Nie udało się wysłać wiadomości", status: "Błąd")
+            let message = NSLocalizedString("Failed to send message", comment: "DetailVC")
+            let status = NSLocalizedString("Error", comment: "DetailVC")
+
+            messageAlert(withText: message, status: status)
         case MessageComposeResult.sent.rawValue:
             self.dismiss(animated: true, completion: nil)
-            messageAlert(withText: "Wiadomość została wysłana", status: "Sukces")
+            let message = NSLocalizedString("Message was send", comment: "DetailVC")
+            let status = NSLocalizedString("Success", comment: "DetailVC")
+            messageAlert(withText: message, status: status)
         default:
             break;
         }
+        //            messageAlert(withText: "Wiadomość została anulowana", status: "Informacja")
+        //            messageAlert(withText: "Nie udało się wysłać wiadomości", status: "Błąd")
+        //            messageAlert(withText: "Wiadomość została wysłana", status: "Sukces")
     }
     
     func messageAlert(withText text:String, status:String){
