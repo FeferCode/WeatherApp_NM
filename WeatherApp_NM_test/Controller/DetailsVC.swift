@@ -11,6 +11,7 @@ import MessageUI
 
 class DetailsVC: UIViewController, MFMessageComposeViewControllerDelegate {
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var dImage: UIImageView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -21,6 +22,15 @@ class DetailsVC: UIViewController, MFMessageComposeViewControllerDelegate {
     @IBOutlet weak var humidityLabel: UILabel!
     
     var cityData:City?
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        if UIDevice.current.orientation.isLandscape {
+            self.scrollView.contentInset = UIEdgeInsets(top: 100, left: 0, bottom: 0, right: 0)
+            self.scrollView.updateConstraints()
+        } else if UIDevice.current.orientation.isPortrait {
+            self.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            self.scrollView.updateConstraints()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
