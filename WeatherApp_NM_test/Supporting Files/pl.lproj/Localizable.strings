@@ -16,3 +16,6 @@
 /* DetailVC */
 "Success" = "Sukces";
 
+/* Search in user language */
+"en" = "pl";
+

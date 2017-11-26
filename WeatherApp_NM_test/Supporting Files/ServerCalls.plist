@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>lang</key>
+	<string>&amp;lang=</string>
 	<key>image_url</key>
 	<string>https://openweathermap.org/img/w/</string>
 	<key>imperial_units</key>
