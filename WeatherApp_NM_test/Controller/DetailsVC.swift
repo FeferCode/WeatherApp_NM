@@ -22,6 +22,7 @@ class DetailsVC: UIViewController, MFMessageComposeViewControllerDelegate {
     @IBOutlet weak var humidityLabel: UILabel!
     
     var cityData:City?
+    
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         if UIDevice.current.orientation.isLandscape {
             self.scrollView.contentInset = UIEdgeInsets(top: 100, left: 0, bottom: 0, right: 0)
@@ -47,8 +48,10 @@ class DetailsVC: UIViewController, MFMessageComposeViewControllerDelegate {
             self.dImage.loadImageUsingCacheWithURLString(url, placeHolder: UIImage(named: "placeholder"))
         }
         
+        
+        
         self.descriptionLabel.text = data.weather_description!
-        self.dateLabel.text = String(describing: data.date!)
+        self.dateLabel.text = formatDate(date: data.date!)
         self.tempLabel.text = String(describing: data.temp) + " °C"
         self.tempMaxLabel.text = String(describing: data.temp_max) + " °C"
         self.tempMinLabel.text = String(describing: data.temp_min) + " °C"
@@ -60,7 +63,7 @@ class DetailsVC: UIViewController, MFMessageComposeViewControllerDelegate {
         
         if (MFMessageComposeViewController.canSendText()) {
             let controller = MFMessageComposeViewController()
-            controller.body = "Text Body"
+            controller.body = "\(self.cityData!.temp)°C, \(self.cityData?.weather_description ?? "nil")"
             controller.messageComposeDelegate = self
             self.present(controller, animated: true, completion: nil)
         }
@@ -89,9 +92,6 @@ class DetailsVC: UIViewController, MFMessageComposeViewControllerDelegate {
         default:
             break;
         }
-        //            messageAlert(withText: "Wiadomość została anulowana", status: "Informacja")
-        //            messageAlert(withText: "Nie udało się wysłać wiadomości", status: "Błąd")
-        //            messageAlert(withText: "Wiadomość została wysłana", status: "Sukces")
     }
     
     func messageAlert(withText text:String, status:String){
@@ -99,4 +99,20 @@ class DetailsVC: UIViewController, MFMessageComposeViewControllerDelegate {
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func formatDate(date:NSDate) -> String{
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "hh:mm dd-MM-yyyy"
+        
+        let newDate: NSDate? = date
+        return dateFormatterPrint.string(from: newDate! as Date)
+    }
 }
+
+
+
+
+
