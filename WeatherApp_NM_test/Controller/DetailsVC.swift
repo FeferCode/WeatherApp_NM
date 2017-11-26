@@ -60,10 +60,9 @@ class DetailsVC: UIViewController, MFMessageComposeViewControllerDelegate {
     }
     
     @IBAction func sendWeatherButton(_ sender: Any) {
-        
         if (MFMessageComposeViewController.canSendText()) {
             let controller = MFMessageComposeViewController()
-            controller.body = "\(self.cityData!.temp)°C, \(self.cityData?.weather_description ?? "nil")"
+            controller.body = "\(self.cityData!.name ?? "nil") \(self.cityData!.temp)°C, \(self.cityData?.weather_description ?? "nil")"
             controller.messageComposeDelegate = self
             self.present(controller, animated: true, completion: nil)
         }
