@@ -36,6 +36,7 @@ class MainVC: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITabl
                                     appD.saveContext()
                                     self.attemptFetch()
                                     self.tableView.reloadData()
+                                    self.searchBar.resignFirstResponder()
             },
                                   failure: { error in
                                     let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: UIAlertControllerStyle.alert)
@@ -62,10 +63,6 @@ class MainVC: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITabl
         }
         return 0
         
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -104,7 +101,7 @@ class MainVC: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITabl
             try self.fetchResultController.performFetch()
         } catch {
             let error = error as NSError
-//            print("\(error)")
+            print("\(error)")
         }
     }
 }

@@ -25,7 +25,7 @@ class DetailsVC: UIViewController, MFMessageComposeViewControllerDelegate {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         if UIDevice.current.orientation.isLandscape {
-            self.scrollView.contentInset = UIEdgeInsets(top: 100, left: 0, bottom: 0, right: 0)
+            self.scrollView.contentInset = UIEdgeInsets(top: 150, left: 0, bottom: 150, right: 0)
             self.scrollView.updateConstraints()
         } else if UIDevice.current.orientation.isPortrait {
             self.scrollView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)

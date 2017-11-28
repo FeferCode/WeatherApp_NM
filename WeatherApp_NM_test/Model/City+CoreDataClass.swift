@@ -48,7 +48,6 @@ public class City: NSManagedObject {
         self.name = name
         self.date = DateConverte.intToDate(forNumber: date) as NSDate
         
-        
         if let weatherDictionary = json[MainKeys.weather] as? [[String:Any]] {
             let weather = weatherDictionary.first as [String:Any]!
             guard let main = weather![WeatherKey.main] as? String,
@@ -75,7 +74,6 @@ public class City: NSManagedObject {
             self.temp_min = temp_min
             self.temp_max = temp_max
         } else { return }
-
     }
     
 }
